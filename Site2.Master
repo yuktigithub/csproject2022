@@ -1,0 +1,44 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site2.Master.vb" Inherits="csproject2022.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <asp:Image ID="Image1" runat="server" imageUrl="~/bg2.png" width="100%" height="200px"/>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Menu ID="Menu1" runat="server" BackColor="#CC66FF" BorderColor="White" DynamicHorizontalOffset="50" DynamicVerticalOffset="10" ForeColor="White" Orientation="Horizontal" Width="100%">
+                <DynamicMenuItemStyle BackColor="#CC66FF" BorderColor="#CC00FF" BorderStyle="Solid" BorderWidth="4px" ForeColor="White" HorizontalPadding="15px" ItemSpacing="2px" VerticalPadding="15px" />
+                <DynamicMenuStyle BackColor="#CC99FF" />
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="home.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Exams" Value="Exams" NavigateUrl="exam.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Course platforms" Value="Course platforms">
+                    <asp:MenuItem NavigateUrl="https://byjus.com/" Text="Byjus" Value="Byjus"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="https://www.careerwill.com/" Text="Careerwill" Value="Careerwill"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="https://www.adda247.com/" Text="Adda24*7" Value="Adda24*7"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="https://www.unacademy.com/" Text="Unacademy" Value="Unacademy"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Success story" Value="Success story" NavigateUrl="success.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="About" Value="About" NavigateUrl="about.aspx"></asp:MenuItem>
+               
+                <asp:MenuItem Text="Student login" Value="Student login" NavigateUrl="student.aspx"></asp:MenuItem>
+               
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="20px" ItemSpacing="70px" ForeColor="White" />
+            <StaticMenuStyle HorizontalPadding="100px" VerticalPadding="10px" />
+            <StaticSelectedStyle ItemSpacing="50px" />
+        </asp:Menu>
+    </form>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
